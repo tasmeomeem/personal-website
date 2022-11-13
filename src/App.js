@@ -1,8 +1,8 @@
-import Home from './pages/Home';
-import Resume from './pages/Resume';
-import Contact from './pages/Contact';
-import Portfolio from './pages/Portfolio';
-import Blog from './pages/Blog';
+import Home from './pages/Home/Home';
+import Resume from './pages/Resume/Resume';
+import Contact from './pages/Contact/Contact';
+import Portfolio from './pages/Portfolio/Portfolio';
+import Blog from './pages/Blog/Blog';
 
 import { Routes, Route } from "react-router-dom";
 

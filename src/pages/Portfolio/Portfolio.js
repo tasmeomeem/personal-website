@@ -1,11 +1,7 @@
-import Header from '../components/Header';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 import { Link } from "react-router-dom";
-import Sidebar from '../components/Sidebar';
-import Menu from '../components/Menu';
+import Sidebar from './../../components/Layout/Sidebar';
+import Menu from './../../components/Layout/Menu';
+import Header from './../../components/Layout/Header';
 
 function Portfolio() {
     return (
