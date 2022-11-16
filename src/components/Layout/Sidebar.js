@@ -1,3 +1,5 @@
+import Button from './../UI/Button'
+
 function Sidebar() {
 
     return (
@@ -27,8 +29,8 @@ function Sidebar() {
                             Richard hanrick
                         </div>
 
-                        <div className="mt-3">
-                            <button type="button" className="btn btn-secondary btn-sm fs-6">Web Developer</button>
+                        <div className=" button-layout mt-3">
+                            <Button className="btn-sm fs-6" text="Web Developer" />
                         </div>
 
                         <div className="collapse d-xl-block" id="contact-info">

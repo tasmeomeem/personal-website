@@ -5,6 +5,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Layout from './../../components/Layout/Layout'
+import ServiceCard from './../../components/Card/ServiceCard'
+import TestimonialCard from './../../components/Card/TestimonialCard'
 
 function Home() {
     return (
@@ -36,67 +38,44 @@ function Home() {
                             </div>
                         </div>
                     </div>
+
                     <div className="row px-5 mt-4">
                         <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                            <div className="card text-center text-sm-start">
-                                <div className="card-body d-sm-flex ">
-                                    <div>
-                                        <img className="card-image" src="./assets/image/icon-design.svg" />
-                                    </div>
-                                    <div className="text-card pt-3">
-                                        <h4 className="card-title fw-bold">Web Design</h4>
-                                        <p className="card-text fs-6">With supporting text below as a natural lead-in to additional content.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <ServiceCard
+                                img="./assets/image/icon-design.svg" 
+                                title="Web Design" 
+                                description="With supporting text below as a natural lead-in to additional content"
+                            />
                         </div>
 
                         <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                            <div className="card text-center text-sm-start">
-                                <div className="card-body d-sm-flex">
-                                    <div>
-                                        <img className="card-image" src="./assets/image/icon-dev.svg" />
-                                    </div>
-                                    <div className="text-card pt-3">
-                                        <h4 className="card-title fw-bold">Web Development</h4>
-                                        <p className="card-text fs-6">With supporting text below as a natural lead-in to additional content.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <ServiceCard
+                                img="../assets/image/icon-dev.svg" 
+                                title="Web Developer" 
+                                description="With supporting text below as a natural lead-in to additional content."
+                            />
                         </div>
                     </div>
 
                     <div className="row px-5 mt-4">
                         <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                            <div className="card text-center text-sm-start">
-                                <div className="card-body d-sm-flex">
-                                    <div>
-                                        <img className="card-image" src="./assets/image/icon-app.svg" />
-                                    </div>
-
-                                    <div className="text-card pt-3">
-                                        <h4 className="card-title fw-bold">Mobile Apps</h4>
-                                        <p className="card-text fs-6">
-                                            With supporting text below as a natural lead-in to additional content.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <ServiceCard
+                                img="../assets/image/icon-photo.svg" 
+                                title="Photography" 
+                                description="With supporting text below as a natural lead-in to additional content"
+                            />
                         </div>
 
                         <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                            <div className="card text-center text-sm-start">
-                                <div className="card-body d-sm-flex">
-                                    <div>
-                                        <img className="card-image" src="./assets/image/icon-photo.svg" />
-                                    </div>
-                                    <div className="text-card pt-3">
-                                        <h4 className="card-title fw-bold">Photography</h4>
-                                        <p className="card-text fs-6">With supporting text below as a natural lead-in to additional content.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <ServiceCard
+                                img="./assets/image/icon-app.svg" 
+                                title="Mobile Apps" 
+                                description="With supporting text below as a natural lead-in to additional content."
+                            />
                         </div>
                     </div>
+
+                    
 
                     <div className="row p-5">
                         <div className="col-sm-12">
@@ -109,37 +88,7 @@ function Home() {
                     <div className="row ">
                         <div className=" col-12 ">
                             <div className="container">
-                                <div className="modal fade" id="testimonial-modal-1">
-                                    <div className="modal-dialog">
-                                        <div className="modal-content bg-dark">
-                                            <div className="modal-header">
-                                                <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
-                                            </div>
-
-                                            <div className="modal-body d-flex">
-                                                <div className="pic">
-                                                    <img className="" src="./assets/image/avatar-4.png" />
-                                                    <img className="" src="./assets/image/icon-quote.svg" />
-                                                </div>
-
-                                                <div className="description">
-                                                    <div className="modal-title-1">
-                                                        <h4 className="fw-bold ms-3">Daniel Lewis</h4>
-                                                    </div>
-
-                                                    <div className="modal-title-2">
-                                                        <h6>14 June, 2021</h6>
-
-                                                    </div>
-
-                                                    <div className="modal-description">
-                                                        <p className="card-text-testmonials-modal"> Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.</p>
-                                                    </div>
-                                                </div>
-                                            </div >
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div className="testimonial-slider">
                                     <Swiper
                                         module={[Navigation, Pagination, Scrollbar, A11y]}
@@ -161,49 +110,33 @@ function Home() {
                                             }
                                         }
 
-                                    >
+                                    > 
                                         <SwiperSlide>
-                                            <div className="card-testmonials" data-bs-toggle="modal" data-bs-target="#testimonial-modal-1">
-                                                <div className="card-body">
-                                                    <div className="card-testmonials-top">
-                                                        <img className="card-image-testmonials" src="./assets/image/avatar-1.png" />
-                                                        <h4 className="card-title fw-bold ms-3">Daniel Lewis</h4>
-                                                    </div>
-                                                    <div className="text-card-testmonials pt-3">
-                                                        <p className="card-text-testmonials fs-6"> Richard was hired to create a corporate identity. We were very pleased with the work </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
+                                            <TestimonialCard
+                                                modal_id="testimonial-modal-1"
+                                                img="./assets/image/avatar-1.png"
+                                                title="Daniel Lewis"
+                                                created_at="14 June, 2021"
+                                                description="Richard was hired to create a corporate identity. We were very pleased with the work"
+                                            />
                                         </SwiperSlide>
 
                                         <SwiperSlide>
-                                            <div className="card-testmonials ">
-                                                <div className="card-body">
-                                                    <div className="card-testmonials-top">
-                                                        <img className="card-image-testmonials" src="./assets/image/avatar-2.png" />
-                                                        <h4 className="card-title fw-bold ms-3">Jessica Miller</h4>
-                                                    </div>
-                                                    <div className="text-card-testmonials pt-3">
-                                                        <p className="card-text-testmonials fs-6">Richard was hired to create a corporate identity. We were very pleased with the work </p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <TestimonialCard
+                                                modal_id="testimonial-modal-2"
+                                                img="./assets/image/avatar-2.png"
+                                                title="jessica Miller"
+                                                description="Richard was hired to create a corporate identity. We were very pleased with the work"
+                                            />
                                         </SwiperSlide>
 
                                         <SwiperSlide>
-                                            <div className="card-testmonials ">
-                                                <div className="card-body">
-                                                    <div className="card-testmonials-top">
-                                                        <img className="card-image-testmonials" src="./assets/image/avatar-3.png" />
-                                                        <h4 className="card-title fw-bold ms-3">Jessica Miller</h4>
-                                                    </div>
-                                                    <div className="text-card-testmonials pt-3">
-                                                        <p className="card-text-testmonials fs-6">Richard was hired to create a corporate identity. We were very pleased with the work </p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <TestimonialCard
+                                                modal_id="testimonial-modal-3"
+                                                img="../assets/image/avatar-3.png"
+                                                title="jessica Miller"
+                                                description="Richard was hired to create a corporate identity. We were very pleased with the work"
+                                            />
                                         </SwiperSlide>
                                     </Swiper>
                                 </div>

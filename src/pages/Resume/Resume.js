@@ -1,7 +1,4 @@
 import { Link } from "react-router-dom";
-import Sidebar from './../../components/Layout/Sidebar';
-import Menu from './../../components/Layout/Menu';
-import Header from './../../components/Layout/Header';
 import Layout from './../../components/Layout/Layout'
 
 function Resume() {

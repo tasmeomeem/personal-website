@@ -1,6 +1,6 @@
-import Sidebar from './../../components/Layout/Sidebar';
-import Menu from './../../components/Layout/Menu';
-import Header from './../../components/Layout/Header';
+import Sidebar from './Sidebar';
+import Menu from './Menu';
+import Header from './Header';
 
 function Layout(props) {
     return (
