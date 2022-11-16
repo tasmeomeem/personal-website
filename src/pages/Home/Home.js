@@ -4,9 +4,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import Layout from './../../components/Layout/Layout'
-import ServiceCard from './../../components/Card/ServiceCard'
-import TestimonialCard from './../../components/Card/TestimonialCard'
+import Layout from './../../components/Layout/Layout';
+import ServiceCard from './../../components/Card/ServiceCard';
+import TestimonialCard from './../../components/Card/TestimonialCard';
+import TestimonialModal from '../../components/Modal/TestimonialModal';
 
 function Home() {
     return (
@@ -88,7 +89,6 @@ function Home() {
                     <div className="row ">
                         <div className=" col-12 ">
                             <div className="container">
-                                
                                 <div className="testimonial-slider">
                                     <Swiper
                                         module={[Navigation, Pagination, Scrollbar, A11y]}
@@ -98,7 +98,6 @@ function Home() {
                                         pagination={{ clickable: true }}
                                         scrollbar={{ draggable: true }}
                                         onSwiper={(Swiper) => console.log(Swiper)}
-
                                         breakpoints={
                                             {
                                                 0: {
@@ -109,14 +108,12 @@ function Home() {
                                                 },
                                             }
                                         }
-
-                                    > 
+                                    >
                                         <SwiperSlide>
                                             <TestimonialCard
                                                 modal_id="testimonial-modal-1"
                                                 img="./assets/image/avatar-1.png"
                                                 title="Daniel Lewis"
-                                                created_at="14 June, 2021"
                                                 description="Richard was hired to create a corporate identity. We were very pleased with the work"
                                             />
                                         </SwiperSlide>
@@ -139,6 +136,30 @@ function Home() {
                                             />
                                         </SwiperSlide>
                                     </Swiper>
+
+                                    <TestimonialModal
+                                        modal_id="testimonial-modal-1"
+                                        img="./assets/image/avatar-1.png"
+                                        title="Daniel Lewis"
+                                        description="Richard was hired to create a corporate identity. We were very pleased with the work"
+                                        created_at="14 June, 2021"
+                                    />
+
+                                    <TestimonialModal
+                                        modal_id="testimonial-modal-2"
+                                        img="./assets/image/avatar-2.png"
+                                        title="jessica Miller"
+                                        description="Richard was hired to create a corporate identity. We were very pleased with the work"
+                                        created_at="14 June, 2021"
+                                    />
+
+                                    <TestimonialModal
+                                        modal_id="testimonial-modal-3"
+                                        img="../assets/image/avatar-3.png"
+                                        title="jessica Miller"
+                                        description="Richard was hired to create a corporate identity. We were very pleased with the work"
+                                        created_at="14 June, 2021"
+                                    />
                                 </div>
                             </div>
                         </div>
