@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
-import Sidebar from './../../components/Layout/Sidebar';
-import Menu from './../../components/Layout/Menu';
-import Header from './../../components/Layout/Header';
-import Layout from './../../components/Layout/Layout'
+import Layout from './../../components/Layout/Layout';
+import BlogCard from '../../components/Card/BlogCard';
+
 
 function Blog() {
     return (
@@ -21,49 +19,29 @@ function Blog() {
 
                     <div className="heading-border ms-5 mt-2"></div>
 
-                    <div className="row px-5">
+                    <div className="row px-5 mt-3">
                         <div className="col-md-6 col-sm-12 col-lg-6 col-xl-6">
-                            <div className="portfolio-card shadow">
-                                <div className="inner-blog">
-                                    <img src="./assets/image/street food.png" className="card-img-top" />
-                                </div>
-                                
-                                <div className="card-body">
-                                    <div className="card-blog">
-                                        Design .Fab 23,2022
-                                    </div>
-                                    <h4 className="text-conference">Design conference in 2022</h4>
-
-                                    <div className="blog">
-                                        varaity of card design..
-                                    </div> 
-                                    
-                                </div>
-                            </div>
+                            <BlogCard 
+                                img="./assets/image/street food.png"
+                                title="Design .Fab 23,2022"
+                                description="Design conference in 2022"
+                                blog="varaity of card design.."
+                            
+                            />
                         </div>
 
                         <div className="col-md-6 col-sm-12 col-lg-6 col-xl-6">
-                            <div className="portfolio-card">
-                                <div className="inner-blog">
-                                    <img src="./assets/image/india food.png" className="card-img-top" />
-                                </div>
-                                
-                                <div className="card-body">
-                                    <div className="card-blog">
-                                        Design .Fab 23,2022
-                                    </div>
-                                    <h4 className="text-conference">Design conference in 2022</h4>
-
-                                    <div className="blog">
-                                        varaity of card design..
-                                    </div> 
-                                </div>
-                            </div>
+                            <BlogCard 
+                                img="./assets/image/india food.png"
+                                title="Design .Fab 23,2022"
+                                description="Design conference in 2022"
+                                blog="varaity of card design.."
+                            
+                            />
                         </div>
                     </div>
                 </div>
-            </Layout>
-                    
+            </Layout>      
         </>
     );
 }

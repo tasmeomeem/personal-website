@@ -63,10 +63,9 @@ function Contact() {
                     <div className="col-12">
                         <div className="text-end me-5 mt-4">
                             <Button className="button-contact">
-                                <i className="fa-regular fa-arrow-pointer"></i>
+                                <i class="fa-regular fa-paper-plane me-2"></i>
                                 Your massege
-                            </Button>
-                                
+                            </Button>   
                         </div>
                     </div>
                 </div>

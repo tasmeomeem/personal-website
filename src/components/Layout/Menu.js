@@ -13,19 +13,19 @@ function Menu() {
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav ms-auto">
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/">About</Link>
+                                    <Link className="nav-link" to="/">Home</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/resume">Resume</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/portfolio">portfolio</Link>
+                                    <Link className="nav-link" to="/portfolio">Portfolio</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/blog">blog</Link>
+                                    <Link className="nav-link" to="/blog">Blog</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/contact">contact</Link>
+                                    <Link className="nav-link" to="/contact">Contact</Link>
                                 </li>
                             </ul>
                         </div>

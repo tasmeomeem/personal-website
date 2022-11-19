@@ -107,7 +107,7 @@ body {
 }
 
 .card-text {
-	color: hsl(0, 0%, 84%);
+	color: #fff;
 }
 
 .card-image-testmonials {
@@ -345,15 +345,15 @@ body {
 }
 
 .b-warning {
-    border-color: rgb(255, 187, 92);!important;
+    border-color: rgb(255, 187, 92) !important;
 }
 
 .b-primary {
-    border-color: rgb(255, 187, 92);!important;
+    border-color: rgb(255, 187, 92) !important;
 }
 
 .b-danger {
-    border-color: rgb(255, 187, 92);!important;
+    border-color: rgb(255, 187, 92) !important;
 }
 .text {
     color: rgb(255, 187, 92);
@@ -404,14 +404,19 @@ body {
 .web {
     color: gray;
 }
+
+/*portfolio-card */
+
 .inner {
     overflow: hidden;
+    border-radius: 15px;
 }
 .inner img {
-    transition: all 1.5s ease;
+    transition: 1.5s;
 }
-.inner:hover img {
+.inner img:hover{
     transform: scale(1.5);
+
 }
 .text-conference:hover{
     color: #f4c414;

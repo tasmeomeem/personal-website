@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import Layout from './../../components/Layout/Layout'
+import Layout from './../../components/Layout/Layout';
+import PortfolioCard from '../../components/Card/PortfolioCard';
 
 function Portfolio() {
     return (
@@ -43,60 +44,27 @@ function Portfolio() {
 
                     <div className="row px-5">
                         <div className="col-md-8 col-sm-12 col-lg-4 col-xl-4">
-                            <div className="portfolio-card shadow">
-                                <div className="inner">
-                                    <img src="./assets/image/portfolio-1.png" className="card-img-top" />
-                                </div>
-                                
-                                <div className="card-body">
-                                    <div className="card-text">
-                                        Finance 
-                                    </div>
+                            <PortfolioCard
+                                img="./assets/image/portfolio-1.png" 
+                                title="Finance" 
+                                description="web Development"
+                            />
+                        </div>
 
-                                    <div className="web">
-                                        web Development
-                                    </div> 
-                                    
-                                </div>
-                            </div>
+                        <div className="col-md-8 col-sm-12 col-lg-4 col-xl-4">   
+                            <PortfolioCard
+                                img="./assets/image/portfolio-1.png" 
+                                title="Finance" 
+                                description="web Development"
+                            />
                         </div>
 
                         <div className="col-md-8 col-sm-12 col-lg-4 col-xl-4">
-                            <div className="portfolio-card">
-                                <div className="inner">
-                                    <img src="./assets/image/portfolio-1.png" className="card-img-top" />
-                                </div>
-                                
-                                <div className="card-body">
-                                    <div className="card-text">
-                                        Orizon
-                                    </div>
-
-                                    <div className="web">
-                                        web Development
-                                    </div> 
-                                    
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-md-8 col-sm-12 col-lg-4 col-xl-4">
-                            <div className="portfolio-card">
-                                <div className="inner">
-                                    <img src="./assets/image/portfolio-1.png" className="card-img-top" />
-                                </div>
-                                
-                                <div className="card-body">
-                                    <div className="card-text">
-                                        Fundo
-                                    </div>
-
-                                    <div className="web">
-                                        web Development
-                                    </div> 
-                                    
-                                </div>
-                            </div>
+                            <PortfolioCard
+                                img="./assets/image/portfolio-1.png" 
+                                title="Finance" 
+                                description="web Development"
+                            />
                         </div>
                     </div>
                 </div>
