@@ -1,7 +1,7 @@
-import Layout from './../../components/Layout/Layout'
-import Service from './Partials/Service.js'
-import Testimonial from './Partials/Testimonial.js'
-import  Clients from './Partials/Clients'
+import Layout from './../../components/Layout/Layout';
+import Service from './Partials/Service.js';
+import Testimonial from './Partials/Testimonial.js';
+import  Client from './Partials/Client';
 
 function Home() {
     return (
@@ -30,7 +30,7 @@ function Home() {
 
                     <Testimonial />
 
-                    <Clients />
+                    <Client />
                 </div>  
             </Layout>   
         </>

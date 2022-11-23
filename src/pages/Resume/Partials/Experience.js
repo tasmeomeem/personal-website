@@ -1,4 +1,28 @@
-function Experience(){
+function Experience () {
+
+    let experiences = [
+        {
+            name: " Creative Director",
+            year: "2015 — Present",
+            description: "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti quos dolores et quas molestias exceptur."
+            
+        },
+
+        {
+            name: " Art Director",
+            year: "2013 — 2015",
+            description: "Ratione voluptatem sequi nesciunt facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis.",
+            
+        },
+
+        {
+            name: " Web Designer",
+            year: "2010 — 2015",
+            description: "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti quos dolores et quas molestias exceptur."
+            
+        },
+            
+    ];
     return (
         <>
             <div>
@@ -12,42 +36,18 @@ function Experience(){
                 </div>
 
                 <div className="timeline  block mb-4">
-                    <div className="tl-item active">
-                        <div className="tl-dot b-primary px-5 mt-4 ms-3"></div>
-                        <div className="tl-content">
-                            <h5 className="mt-4">Creative Director</h5>
-                            <div className="text">2015 — Present</div>
-                            <div className="">
-                                Nemo enim ipsam voluptatem blanditiis praesentium
-                                voluptum delenit atque corrupti, quos dolores et qvuas molestias exceptur.
+                    {experiences.map((experience, index) =>
+                        <div className="tl-item active">
+                            <div className={'tl-dot b-primary px-5 ms-3 ' + (index == 0 ? 'mt-4' : '' )}></div>
+                            <div className="tl-content">
+                                <div>
+                                    <h5 className="mt-4">{experience.name}</h5>
+                                    <div className="text">{experience.year}</div>
+                                    <div className="description">{experience.description}</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-
-                    <div className="tl-item active">
-                        <div className="tl-dot b-warning px-5 ms-3"></div>
-                        <div className="tl-content">
-                            <h5>Art Director</h5>
-                            <div className="text">2013 — 2015</div>
-                            <div className="">
-                                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit
-                                atque corrupti, quos dolores et quas molestias exceptur.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="tl-item active">
-                        <div className="tl-dot b-warning px-5 ms-3"></div>
-                        <div className="tl-content">
-                            <h5>Web Designer</h5>
-                            <div className="text">2010 — 2013</div>
-                            <div className="">
-                                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque
-                                corrupti, quos dolores et quas molestias exceptur.
-                            </div>
-                        </div>
-                    </div>
+                    )}
                 </div>
             </div>
         </>

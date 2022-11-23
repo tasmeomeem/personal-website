@@ -8,6 +8,30 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 
 function Testimonial () {
+    let testimonials = [
+        {
+            modal_id: "testimonial-modal-1",
+            img: "./assets/image/avatar-1.png",
+            title: "Daniel Lewis",
+            description: "Richard was hired to create a corporate identity. We were very pleased with the work",
+                                    
+        },
+        {
+            modal_id: "testimonial-modal-2",
+            img: "./assets/image/avatar-2.png",
+            title: "jessica Miller",
+            description: "Richard was hired to create a corporate identity. We were very pleased with the work",
+        },
+        {
+            modal_id: "testimonial-modal-3",
+            img: "../assets/image/avatar-3.png",
+            title: "jessica Miller",
+            description: "Richard was hired to create a corporate identity. We were very pleased with the work",
+        },
+    ];
+
+
+
 	return (
 		<>	
             <div className="row p-5">
@@ -41,57 +65,32 @@ function Testimonial () {
                                     }
                                 }
                             >
-                                <SwiperSlide>
-                                    <TestimonialCard
-                                        modal_id="testimonial-modal-1"
-                                        img="./assets/image/avatar-1.png"
-                                        title="Daniel Lewis"
-                                        description="Richard was hired to create a corporate identity. We were very pleased with the work"
-                                    />
-                                </SwiperSlide>
-
-                                <SwiperSlide>
-                                    <TestimonialCard
-                                        modal_id="testimonial-modal-2"
-                                        img="./assets/image/avatar-2.png"
-                                        title="jessica Miller"
-                                        description="Richard was hired to create a corporate identity. We were very pleased with the work"
-                                    />
-                                </SwiperSlide>
-
-                                <SwiperSlide>
-                                    <TestimonialCard
-                                        modal_id="testimonial-modal-3"
-                                        img="../assets/image/avatar-3.png"
-                                        title="jessica Miller"
-                                        description="Richard was hired to create a corporate identity. We were very pleased with the work"
-                                    />
-                                </SwiperSlide>
+                                {testimonials.map((testimonial, index) =>   
+                                    <SwiperSlide>
+                                        <TestimonialCard
+                                            modal_id= {testimonial.modal_id}
+                                            img={testimonial.img}
+                                            title={testimonial.title}
+                                            description={testimonial.description}
+                                        />
+                                    </SwiperSlide>
+                                )}
+                            
                             </Swiper>
 
-                            <TestimonialModal
-                                modal_id="testimonial-modal-1"
-                                img="./assets/image/avatar-1.png"
-                                title="Daniel Lewis"
-                                description="Richard was hired to create a corporate identity. We were very pleased with the work"
-                                created_at="14 June, 2021"
-                            />
-
-                            <TestimonialModal
-                                modal_id="testimonial-modal-2"
-                                img="./assets/image/avatar-2.png"
-                                title="jessica Miller"
-                                description="Richard was hired to create a corporate identity. We were very pleased with the work"
-                                created_at="14 June, 2021"
-                            />
-
-                            <TestimonialModal
-                                modal_id="testimonial-modal-3"
-                                img="../assets/image/avatar-3.png"
-                                title="jessica Miller"
-                                description="Richard was hired to create a corporate identity. We were very pleased with the work"
-                                created_at="14 June, 2021"
-                            />
+                                <div className="row px-5 mt-4 g-3">
+                                    {testimonials.map((testimonial, index) =>
+                                        <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                                            <TestimonialModal
+                                                modal_id={testimonial.modal_id}
+                                                img={testimonial.img}
+                                                title={testimonial.title}
+                                                description={testimonial.description}
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                            
                         </div>
                     </div>
                 </div>

@@ -5,7 +5,34 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 
-function Clients(){
+function Client () {
+
+    let clients = [
+        {
+            img: "./assets/image/logo-1-color.png",          
+        },
+            
+        {
+            img: "./assets/image/logo-2-color.png",
+        },
+            
+        {
+            img: "./assets/image/logo-3-color.png", 
+        },
+
+        {
+            img: "./assets/image/logo-4-color.png",
+        },
+
+        {
+            img:"./assets/image/logo-5-color.png",
+        },
+
+        {
+            img: "./assets/image/logo-6-color.png",
+        }
+
+    ];
     return (
         <>
             <div className="row mt-5">
@@ -45,36 +72,15 @@ function Clients(){
                                 }
 
                             >
-                                <SwiperSlide>
-                                    <img src="./assets/image/logo-1-color.png" />
-                                    <p></p>
-                                </SwiperSlide>
-
-                                <SwiperSlide>
-                                    <img src="./assets/image/logo-2-color.png" />
-                                    <p></p>
-                                </SwiperSlide>
-
-                                <SwiperSlide>
-                                    <img src="./assets/image/logo-3-color.png" />
-                                    <p></p>
-                                </SwiperSlide>
-
-                                <SwiperSlide>
-                                    <img src="./assets/image/logo-4-color.png" />
-                                    <p></p>
-                                </SwiperSlide>
-
-                                <SwiperSlide>
-                                    <img src="./assets/image/logo-5-color.png" />
-                                    <p></p>
-                                </SwiperSlide>
-
-                                <SwiperSlide>
-                                    <img src="./assets/image/logo-6-color.png " />
-                                    <p></p>
-                                </SwiperSlide>
-
+                                <div className="row px-5 mt-4 g-3">
+                                    {clients.map((client, index) =>
+                                        <SwiperSlide>
+                                            <div>
+                                                <img src={client.img} />
+                                            </div>
+                                        </SwiperSlide>
+                                    )}
+                                </div>
                             </Swiper>
                         </div>
                     </div>
@@ -85,4 +91,4 @@ function Clients(){
         </>
     );
 }
-export default Clients;
+export default Client;

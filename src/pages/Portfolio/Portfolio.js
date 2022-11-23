@@ -3,6 +3,27 @@ import Layout from './../../components/Layout/Layout';
 import PortfolioCard from '../../components/Card/PortfolioCard';
 
 function Portfolio() {
+    let portfolios = [
+        {
+            img: "./assets/image/portfolio-1.png",
+            title: "Finance",
+            description: "web Development",
+            
+        },
+        {
+            img: "./assets/image/portfolio-1.png",
+            title: "Finance",
+            description: "web Development",
+           
+        },
+        {
+            img: "./assets/image/portfolio-1.png",
+            title: "Finance",
+            description: "web Development",
+            
+        }
+        
+    ];
     return (
         <>
             <Layout>
@@ -42,30 +63,16 @@ function Portfolio() {
                         </nav>
                     </div> 
 
-                    <div className="row px-5">
-                        <div className="col-md-8 col-sm-12 col-lg-4 col-xl-4">
-                            <PortfolioCard
-                                img="./assets/image/portfolio-1.png" 
-                                title="Finance" 
-                                description="web Development"
-                            />
-                        </div>
-
-                        <div className="col-md-8 col-sm-12 col-lg-4 col-xl-4">   
-                            <PortfolioCard
-                                img="./assets/image/portfolio-1.png" 
-                                title="Finance" 
-                                description="web Development"
-                            />
-                        </div>
-
-                        <div className="col-md-8 col-sm-12 col-lg-4 col-xl-4">
-                            <PortfolioCard
-                                img="./assets/image/portfolio-1.png" 
-                                title="Finance" 
-                                description="web Development"
-                            />
-                        </div>
+                    <div className="row px-5 mt-3">
+                        {portfolios.map((portfolio, index) =>
+                            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                                <PortfolioCard
+                                    img={portfolio.img}
+                                    title={portfolio.title}
+                                    description={portfolio.description}
+                                />
+                            </div>
+                        )}
                     </div>
                 </div>
             </Layout>
