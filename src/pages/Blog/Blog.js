@@ -1,25 +1,28 @@
+import { useEffect, useState } from 'react';
 import Layout from './../../components/Layout/Layout';
 import BlogCard from '../../components/Card/BlogCard';
 
-
 function Blog() {
-    let api = 'http://api.mediastack.com/v1/news?access_key=b274f5127d8fe376c2600840f28376de&categories=technology&languages=en';
-        
-    let blogs = [
-        {
-            img: "./assets/image/street food.png",
-            title: "Design .Fab 23,2022",
-            description: "Design conference in 2022",
-            blog: "varaity of card design.."
-        },
-        {
-            img: "./assets/image/india food.png",
-            title: "Design .Fab 23,2022",
-            description: "Design conference in 2022",
-            blog: "varaity of card design..",
-        },
-        
-    ];
+    const [blogs, setBlogs] = useState([]);
+
+    let blogApi = 'http://api.mediastack.com/v1/news?access_key=b274f5127d8fe376c2600840f28376de&categories=technology&languages=en';
+
+    useEffect(() => {
+        fetch(blogApi)
+            .then((response) => response.json())
+            .then((result) => {
+                let items = result.data.map((blog) => {
+                    return {
+                        img: blog.image ?? 'https://via.placeholder.com/400x200/1e1e1f?text=Image',
+                        title: blog.title,
+                        description: blog.description,
+                        created_at: blog.published_at,
+                    };
+                });
+
+                setBlogs(items);
+            });
+    }, [])
 
     return (
         <>
@@ -39,19 +42,20 @@ function Blog() {
 
                     <div className="row px-5 mt-3">
                         {blogs.map((blog, index) =>
-                            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6" key={`blog-card-${index}`}>
                                 <BlogCard
                                     img={blog.img}
                                     title={blog.title}
                                     description={blog.description}
-                                    blog={blog.blog}
+                                    created_at={blog.created_at}
                                 />
                             </div>
                         )}
                     </div>
                 </div>
-            </Layout>      
+            </Layout>
         </>
     );
 }
+
 export default Blog;
