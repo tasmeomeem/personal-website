@@ -2,30 +2,30 @@ function Education () {
 
     let educations = [
         {
-            name: " University School Of The Arts",
-            year: "2007 — 2008",
-            description: "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti quos dolores et quas molestias exceptur."
+            name: "Central womens university",
+            year: "2020 — 2022",
+            description: "I'm doing MBA in Human Resourse Management (HRM)"
             
         },
 
         {
-            name: " New York Academy Of Art",
-            year: "2006 — 2007",
-            description: "Ratione voluptatem sequi nesciunt facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis.",
+            name: " Central Womens University",
+            year: "2016 — 2020",
+            description: "I have complited my graduation(B.A) degree in English Language and Literature",
             
         },
 
         {
-            name: " High School Of Art And Design",
-            year: "2002 — 2004",
-            description: "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti quos dolores et quas molestias exceptur."
+            name: "Chandpur Govt Womens College",
+            year: "2013 — 2015",
+            description: "I have complited my HSC from commerce background."
             
         },
             
         {
-            name: " University School Of The Arts",
-            year: "2007 — 2008",
-            description: "Duis aute irure dolor in reprehenderit in voluptate quila voluptas mag odit aut fugit, sed consequuntur magni dolores eos.",
+            name: "Lady Protima Girls High School",
+            year: "2011 — 2012",
+            description: "I have complited my SSC from commerce background.",
             
         },
     ];
@@ -42,11 +42,11 @@ function Education () {
                     
             <div className="timeline  block mb-4">
                 {educations.map((education, index) =>
-                    <div className="tl-item active">
+                    <div className="tl-item active" key={`education-${index}`}>
                         <div className={'tl-dot b-primary px-5 ms-3 ' + (index == 0 ? 'mt-4' : '' )}></div>
                         <div className="tl-content">
                             <div>
-                                <h5 className="mt-4">{education.name}</h5>
+                                <div className="mt-4 fw-bold fs-5">{education.name}</div>
                                 <div className="text">{education.year}</div>
                                 <div className="description">{education.description}</div>
                             </div>

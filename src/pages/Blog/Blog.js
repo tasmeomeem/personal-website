@@ -5,7 +5,7 @@ import BlogCard from '../../components/Card/BlogCard';
 function Blog() {
     const [blogs, setBlogs] = useState([]);
 
-    let blogApi = 'http://api.mediastack.com/v1/news?access_key=b274f5127d8fe376c2600840f28376de&categories=technology&languages=en';
+    let blogApi = 'http://api.mediastack.com/v1/news?access_key=2727424f80fb26aac8329a08243c4981&categories=technology&languages=en';
 
     useEffect(() => {
         fetch(blogApi)
@@ -22,7 +22,7 @@ function Blog() {
 
                 setBlogs(items);
             });
-    }, [])
+    }, []);
 
     return (
         <>

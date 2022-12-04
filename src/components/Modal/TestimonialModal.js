@@ -11,8 +11,7 @@ function TestimonialModal (props) {
 
                         <div className="modal-body d-flex">
                             <div className="pic">
-                                <img className="" src={props.img} />
-                                <img className="" src="./assets/image/icon-quote.svg" />
+                                <img className="" src={props.img} width="100" height="100"/>
                             </div>
 
                             <div className="description">

@@ -9,28 +9,17 @@ function Client () {
 
     let clients = [
         {
-            img: "./assets/image/logo-1-color.png",          
+            img: "./assets/image/cansoft.jpg",          
         },
             
         {
-            img: "./assets/image/logo-2-color.png",
+            img: "./assets/image/setschedual.png",
         },
             
         {
-            img: "./assets/image/logo-3-color.png", 
+            img: "./assets/image/brand.png", 
         },
 
-        {
-            img: "./assets/image/logo-4-color.png",
-        },
-
-        {
-            img:"./assets/image/logo-5-color.png",
-        },
-
-        {
-            img: "./assets/image/logo-6-color.png",
-        }
 
     ];
     return (
@@ -55,8 +44,6 @@ function Client () {
                                 navigation={false}
                                 pagination={{ clickable: true }}
                                 scrollbar={{ draggable: true, dragSize: 50 }}
-                                onSwiper={(Swiper) => console.log(Swiper)}
-
                                 breakpoints={
                                     {
                                         900: {
@@ -74,9 +61,9 @@ function Client () {
                             >
                                 <div className="row px-5 mt-4 g-3">
                                     {clients.map((client, index) =>
-                                        <SwiperSlide>
-                                            <div>
-                                                <img src={client.img} />
+                                        <SwiperSlide key={`client-card-${index}`}>
+                                            <div className="text-center">
+                                                <img src={client.img} style={{maxWidth:"100%", height:"100px"}}/>
                                             </div>
                                         </SwiperSlide>
                                     )}

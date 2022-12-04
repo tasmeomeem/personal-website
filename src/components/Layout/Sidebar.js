@@ -19,14 +19,14 @@ function Sidebar() {
                             </button>
                         </div>
 
-                        <div className="d-flex justify-content-center ">
+                        <div className="d-flex justify-content-center rounded-circle">
                             <div className="user-image">
-                                <img className="image" src="./assets/image/avatar.png" />
+                                <img className="image" src="./assets/image/meem.jpg" />
                             </div>
                         </div>
 
-                        <div className="mt-4 fs-4 fw-bold">
-                            Richard hanrick
+                        <div className="mt-5 fs-4 fw-bold">
+                            Tasmeo Ahamed Meem
                         </div>
 
                         <div className=" button-layout mt-3">
@@ -38,16 +38,17 @@ function Sidebar() {
 
                             <div className="d-flex gap-3 align-item-center mt-3">
                                 <div className="social-icon">
-                                    <i className="fa-regular fa-envelope"></i>
+                                    <i className="fa-regular fa-envelope ms-3"></i>
                                 </div>
 
                                 <div className="text-start">
-                                    <div className="text-muted">
+                                    <div className="text-muted ms-3">
                                         EMAIL
                                     </div>
 
-                                    <div>
-                                        richard@example.com...
+                                    <div className="ms-3">
+                                        tasmeomeem.dev@
+                                        gmail.com
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +64,7 @@ function Sidebar() {
                                     </div>
 
                                     <div>
-                                        June 23, 1982
+                                        sep 17, 1996
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +80,7 @@ function Sidebar() {
                                     </div>
 
                                     <div>
-                                        +1 (213) 352-2795
+                                        +8801323721771
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +96,7 @@ function Sidebar() {
                                     </div>
 
                                     <div>
-                                        Sacramento, California, USA
+                                        Dhaka Bangladesh
                                     </div>
                                 </div>
                             </div>

@@ -5,24 +5,43 @@ import PortfolioCard from '../../components/Card/PortfolioCard';
 function Portfolio() {
     let portfolios = [
         {
-            img: "./assets/image/portfolio-1.png",
-            title: "Finance",
-            description: "web Development",
+            img: "./assets/image/Turing.png",
+            title: "Turing (clone)",
+            description: "HTML/CSS/Bootstrap/React",
             
         },
         {
-            img: "./assets/image/portfolio-1.png",
-            title: "Finance",
-            description: "web Development",
+            img: "./assets/image/Home-Flambo.png",
+            title: "Movie website",
+            description: "HTML/CSS/Bootstrap/React",
            
         },
         {
-            img: "./assets/image/portfolio-1.png",
-            title: "Finance",
-            description: "web Development",
+            img: "./assets/image/Anon-eCommerce-Website.png",
+            title: "E-commerce-site",
+            description: "HTML/CSS/Bootstrap/React",
+            
+        },  
+        {
+            img: "./assets/image/Personal-website.png",
+            title: "Personal-Website",
+            description: "HTML/CSS/Bootstrap/React",
+            
+        },
+        {
+            img: "./assets/image/promotional page.png",
+            title: "Promotional Card",
+            description: "HTML/CSS/Bootstrap",
+            
+        },
+        {
+            img: "./assets/image/Supermate-Gold.png",
+            title: "Promotional Card",
+            description: "HTML/CSS/Bootstrap",
             
         }
         
+       
     ];
     return (
         <>
@@ -46,16 +65,15 @@ function Portfolio() {
                                 <div className="navbar" id="navbarNav">
                                     <ul className="navbar-nav ms-auto">
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="All">All</Link>
+                                            <div className="nav-link" to="All">
+                                                All
+                                            </div>
                                         </li>
+
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/Web desing">Web desing</Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link className="nav-link" to="/Application">Application</Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link className="nav-link" to="/Web development">Web development</Link>
+                                            <div className="nav-link" to="/Web desing">
+                                                Web desing
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -63,9 +81,9 @@ function Portfolio() {
                         </nav>
                     </div> 
 
-                    <div className="row px-5 mt-3">
+                    <div className="row px-5 mt-3 justify-content-center">
                         {portfolios.map((portfolio, index) =>
-                            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+                            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-4"key={`portfolio-card-${index}`}>
                                 <PortfolioCard
                                     img={portfolio.img}
                                     title={portfolio.title}

@@ -2,25 +2,12 @@ function Experience () {
 
     let experiences = [
         {
-            name: " Creative Director",
-            year: "2015 — Present",
-            description: "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti quos dolores et quas molestias exceptur."
+            name: " React Developer",
+            year: "February, 2022 - (contitue)",
+            description: "I'm working with Brandecy as a React Developer."
             
         },
 
-        {
-            name: " Art Director",
-            year: "2013 — 2015",
-            description: "Ratione voluptatem sequi nesciunt facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis.",
-            
-        },
-
-        {
-            name: " Web Designer",
-            year: "2010 — 2015",
-            description: "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti quos dolores et quas molestias exceptur."
-            
-        },
             
     ];
     return (
@@ -37,7 +24,7 @@ function Experience () {
 
                 <div className="timeline  block mb-4">
                     {experiences.map((experience, index) =>
-                        <div className="tl-item active">
+                        <div className="tl-item active" key={`experience-${index}`}>
                             <div className={'tl-dot b-primary px-5 ms-3 ' + (index == 0 ? 'mt-4' : '' )}></div>
                             <div className="tl-content">
                                 <div>

@@ -3,24 +3,24 @@ import ServiceCard from './../../../components/Card/ServiceCard';
 function Service () {
     let services = [
         {
-            img: "./assets/image/icon-design.svg",
+            icon: "fa-brands fa-html5",
             title: "Web Design",
-            description: "With supporting text below as a natural lead-in to additional content",
+            description: `Web design is the planning of create a new things to reflect your work promently.`
         },
         {
-            img: "../assets/image/icon-dev.svg",
-            title: "Web Developer",
-            description: "With supporting text below as a natural lead-in to additional content.",
+            icon: "fa-brands fa-react",
+            title: "Html to React",
+            description: `React is a efficient, and flexible JavaScript library for building user interfaces.`
         },
         {
-            img: "../assets/image/icon-photo.svg",
-            title: "Photography",
-            description: "With supporting text below as a natural lead-in to additional content", 
+            icon: "fa-brands fa-figma",
+            title: "PSD/Figma to HTML",
+            description: `PSD files are the native file format of Adobe Photoshop.I can convert psd to HTML markup language.`, 
         },
         {
-            img: "./assets/image/icon-app.svg",
-            title: "Mobile Apps",
-            description: "With supporting text below as a natural lead-in to additional content.",
+            icon: "fa-brands fa-bootstrap",
+            title: "Bootstrap  Design",
+            description: `Bootstrap is a free, open source front-end framework for the creation of websites and web apps.`,
         }
     ];
 
@@ -36,9 +36,9 @@ function Service () {
 
             <div className="row px-5 mt-4 g-3">
                 {services.map((service, index) =>
-                    <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6"key={`service-card-${index}`}>
                         <ServiceCard
-                            img={service.img}
+                            icon={service.icon}
                             title={service.title}
                             description={service.description}
                         />

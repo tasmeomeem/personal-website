@@ -2,23 +2,35 @@ function Skill () {
 
     let skills = [
         {
-            name: " Web Design",
-            persentage: "80%",
+            name: " HTML",
+            persentage: "90%",
             
         },
         {
-            name: " Graphic Design",
+            name: " CSS",
             persentage: "70%",
         },
         {
-            name: " Branding",
+            name: " Bootstrap",
             persentage: "90%",
         },
             
         {
-            name: "WordPress",
-            persentage: "50%",
-        }
+            name: "Java script",
+            persentage: "80%",
+        },
+
+        {
+            name: "Jquery",
+            persentage: "60%",
+        },
+
+        {
+            name: "React",
+            persentage: "80%",
+        },
+
+        
     ];
     return (
         <>
@@ -31,7 +43,7 @@ function Skill () {
                 <div className="card">
                     <div className="card-body">
                         {skills.map((skill, index) =>
-                            <div>
+                            <div key={`skill-${index}`}>
                                 <div className="web design fs-6 fw-bold p-2">
                                     {skill.name} {skill.persentage}
                                 </div>

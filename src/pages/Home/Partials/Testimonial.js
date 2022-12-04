@@ -11,22 +11,26 @@ function Testimonial () {
     let testimonials = [
         {
             modal_id: "testimonial-modal-1",
-            img: "./assets/image/avatar-1.png",
-            title: "Daniel Lewis",
-            description: "Richard was hired to create a corporate identity. We were very pleased with the work",
+            img: "./assets/image/mithu.jpg",
+            designation: `Laravel developer of Cansoft`,
+            title: "Mehediul Hassan Miton ",
+            description: "She is honest and web expert. she is forever one member of our team.",
                                     
         },
         {
             modal_id: "testimonial-modal-2",
-            img: "./assets/image/avatar-2.png",
-            title: "jessica Miller",
-            description: "Richard was hired to create a corporate identity. We were very pleased with the work",
+            img: "./assets/image/hridoy.jpg",
+            title: "Rafiul Karim khan ",
+            designation: "Product Manager of set's schedule.",
+            description: "The best web developer I've ever worked with.React skill is good.",
+            
         },
         {
             modal_id: "testimonial-modal-3",
-            img: "../assets/image/avatar-3.png",
-            title: "jessica Miller",
-            description: "Richard was hired to create a corporate identity. We were very pleased with the work",
+            img: "../assets/image/arif.jpg",
+            title: "Arif Hossain",
+            designation: "Chairmen of Kashfulbd",
+            description: "Outstanding React experience.",
         },
     ];
 
@@ -53,7 +57,6 @@ function Testimonial () {
                                 navigation={false}
                                 pagination={{ clickable: true }}
                                 scrollbar={{ draggable: true }}
-                                onSwiper={(Swiper) => console.log(Swiper)}
                                 breakpoints={
                                     {
                                         0: {
@@ -66,11 +69,12 @@ function Testimonial () {
                                 }
                             >
                                 {testimonials.map((testimonial, index) =>   
-                                    <SwiperSlide>
+                                    <SwiperSlide key={`testimonial-card-${index}`}>
                                         <TestimonialCard
                                             modal_id= {testimonial.modal_id}
                                             img={testimonial.img}
                                             title={testimonial.title}
+                                            designation={testimonial.designation}
                                             description={testimonial.description}
                                         />
                                     </SwiperSlide>
@@ -80,11 +84,12 @@ function Testimonial () {
 
                                 <div className="row px-5 mt-4 g-3">
                                     {testimonials.map((testimonial, index) =>
-                                        <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                                        <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6"key={`testimonial-card-${index}`}>
                                             <TestimonialModal
                                                 modal_id={testimonial.modal_id}
                                                 img={testimonial.img}
                                                 title={testimonial.title}
+                                                designation={testimonial.designation}
                                                 description={testimonial.description}
                                             />
                                         </div>

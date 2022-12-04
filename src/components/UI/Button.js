@@ -1,7 +1,7 @@
 function Button (props) {
 	return (
 		<>	
-            <button type="button" className={'btn btn-secondary ' + props.className}>
+            <button type={props.type ?? 'button'} className={'btn btn-secondary ' + props.className}>
                 {props.text}
                 {props.children}
             </button>
