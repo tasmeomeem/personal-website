@@ -5,16 +5,17 @@ import BlogCard from '../../components/Card/BlogCard';
 function Blog() {
     const [blogs, setBlogs] = useState([]);
 
-    let blogApi = 'http://api.mediastack.com/v1/news?access_key=2727424f80fb26aac8329a08243c4981&categories=technology&languages=en';
+    let blogApi = 'https://dev.to/api/articles?tag=webdesign';
 
     useEffect(() => {
         fetch(blogApi)
             .then((response) => response.json())
             .then((result) => {
-                let items = result.data.map((blog) => {
+                let items = result.map((blog) => {
                     return {
-                        img: blog.image ?? 'https://via.placeholder.com/400x200/1e1e1f?text=Image',
+                        img: blog.cover_image ?? blog.social_image ?? 'https://via.placeholder.com/400x200/1e1e1f?text=Image',
                         title: blog.title,
+                        url:blog.url,
                         description: blog.description,
                         created_at: blog.published_at,
                     };
@@ -46,6 +47,7 @@ function Blog() {
                                 <BlogCard
                                     img={blog.img}
                                     title={blog.title}
+                                    url={blog.url}
                                     description={blog.description}
                                     created_at={blog.created_at}
                                 />

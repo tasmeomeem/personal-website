@@ -438,9 +438,10 @@ body {
     transform: scale(1.5);
 
 }
-.text-conference:hover{
-    color: var(--primary);
+.text-conference{
+    color: var(--primary) !important;
     font-weight: bold;
+    text-decoration: none;
 }
 .blog {
     color: wheat;

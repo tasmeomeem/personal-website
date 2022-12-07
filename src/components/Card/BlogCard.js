@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 function BlogCard (props) {
 	return (
 		<>
@@ -7,18 +9,17 @@ function BlogCard (props) {
                 </div>
 
                 <div className="card-body">
+                    <a className="text-conference" target="_blank" href={props.url}>
+                        <h4>{props.title}</h4>
+                    </a>
+                    
                     <div className="card-blog">
-                        {props.title}
+                        {props.description.substring(0, 200)}...
                     </div>
-
-                    <h4 className="text-conference">
-                        {props.description.substring(0, 15)}
-                    </h4>
 
                     <div className="blog">
-                        {props.created_at}
+                        {moment(props.created_at).format('MMM DD, YYYY')}
                     </div>
-
                 </div>
             </div>
 		</>
