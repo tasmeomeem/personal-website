@@ -24,7 +24,6 @@ function Menu() {
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/blog">Blog</Link>
                                 </li>
-                    
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/contact">Contact</Link>
                                 </li>
@@ -32,7 +31,7 @@ function Menu() {
                         </div>
                     </div>
                 </nav>
-            </div> 
+            </div>
         </>
     );
 }

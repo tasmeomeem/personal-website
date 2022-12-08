@@ -5,10 +5,7 @@ function Experience () {
             name: " React Developer",
             year: "February, 2022 - (contitue)",
             description: "I'm working with Brandecy as a React Developer."
-            
         },
-
-            
     ];
     return (
         <>

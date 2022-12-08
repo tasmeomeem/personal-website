@@ -1,7 +1,6 @@
 function PortfolioCard (props) {
-    
 	return (
-		<>	
+		<>
             <div className="portfolio-card mb-4">
                 <div className="inner">
                     <img src={props.img} className="card-img-top" />
@@ -11,12 +10,10 @@ function PortfolioCard (props) {
                     <div>
                         {props.title}
                     </div>
-                    
                     <div className="text-muted">
                         {props.description}
                     </div>
                 </div>
-                
             </div>
 		</>
 	);

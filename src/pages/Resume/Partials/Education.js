@@ -5,28 +5,23 @@ function Education () {
             name: "Central womens university",
             year: "2020 — 2022",
             description: "I'm doing MBA in Human Resourse Management (HRM)"
-            
         },
 
         {
             name: " Central Womens University",
             year: "2016 — 2020",
             description: "I have complited my graduation(B.A) degree in English Language and Literature",
-            
         },
 
         {
             name: "Chandpur Govt Womens College",
             year: "2013 — 2015",
             description: "I have complited my HSC from commerce background."
-            
         },
-            
         {
             name: "Lady Protima Girls High School",
             year: "2011 — 2012",
             description: "I have complited my SSC from commerce background.",
-            
         },
     ];
     return (
@@ -39,7 +34,7 @@ function Education () {
                     Education
                 </div>
             </div>
-                    
+
             <div className="timeline  block mb-4">
                 {educations.map((education, index) =>
                     <div className="tl-item active" key={`education-${index}`}>

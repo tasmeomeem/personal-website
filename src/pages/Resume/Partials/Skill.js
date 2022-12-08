@@ -4,7 +4,6 @@ function Skill () {
         {
             name: " HTML",
             persentage: "90%",
-            
         },
         {
             name: " CSS",
@@ -14,7 +13,6 @@ function Skill () {
             name: " Bootstrap",
             persentage: "90%",
         },
-            
         {
             name: "Java script",
             persentage: "80%",
@@ -29,8 +27,6 @@ function Skill () {
             name: "React",
             persentage: "80%",
         },
-
-        
     ];
     return (
         <>
@@ -38,7 +34,6 @@ function Skill () {
                 My Skills
             </div>
 
-            
             <div className="col-12 p-3">
                 <div className="card">
                     <div className="card-body">

@@ -12,7 +12,7 @@ function BlogCard (props) {
                     <a className="text-conference" target="_blank" href={props.url}>
                         <h4>{props.title}</h4>
                     </a>
-                    
+
                     <div className="card-blog">
                         {props.description.substring(0, 200)}...
                     </div>

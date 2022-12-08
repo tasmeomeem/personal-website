@@ -25,14 +25,13 @@ function Home() {
                             I created web design for some famous brand companies.
                         </div>
                     </div>
-                
                     <Service />
 
                     <Testimonial />
 
                     <Client />
-                </div>  
-            </Layout>   
+                </div>
+            </Layout>
         </>
     );
 }

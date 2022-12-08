@@ -8,40 +8,33 @@ function Portfolio() {
             img: "./assets/image/Turing.png",
             title: "Turing (clone)",
             description: "HTML/CSS/Bootstrap/React",
-            
         },
         {
             img: "./assets/image/Home-Flambo.png",
             title: "Movie website",
             description: "HTML/CSS/Bootstrap/React",
-           
         },
         {
             img: "./assets/image/Anon-eCommerce-Website.png",
             title: "E-commerce-site",
             description: "HTML/CSS/Bootstrap/React",
-            
-        },  
+        },
         {
             img: "./assets/image/Personal-website.png",
             title: "Personal-Website",
             description: "HTML/CSS/Bootstrap/React",
-            
         },
         {
             img: "./assets/image/promotional page.png",
             title: "Promotional Card",
             description: "HTML/CSS/Bootstrap",
-            
+
         },
         {
             img: "./assets/image/Supermate-Gold.png",
             title: "Promotional Card",
             description: "HTML/CSS/Bootstrap",
-            
         }
-        
-       
     ];
     return (
         <>
@@ -79,7 +72,7 @@ function Portfolio() {
                                 </div>
                             </div>
                         </nav>
-                    </div> 
+                    </div>
 
                     <div className="row px-5 mt-3 justify-content-center">
                         {portfolios.map((portfolio, index) =>

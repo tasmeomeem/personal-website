@@ -21,13 +21,11 @@ function Resume() {
 
                     <div className="heading-border ms-5"></div>
                     <Education />
-        
                     <Experience />
 
                     <Skill />
                 </div>
             </Layout>
-                        
         </>
     );
 }
